@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <link rel="stylesheet" type="text/css" href="./index.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sawarabi+Gothic" rel="stylesheet">
+        <script type="text/javascript" src="./ChatConection.js"></script>
+        
+        <title>Wii Shat</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.onkeydown = function (a) {
+                a = a || window.event;
+                switch (a.which || a.keyCode) {
+                        case 13 : 
+                            sendMessage();
+                }
+            }
+            getChats();
+        </script>
+        <div class="chat-box-area">
+            <input class="box" type="text" name="text-box" id="text-box" placeholder="Escribir mensaje...">
+            <button class="round-btn" onclick="sendMessage()">
+            	<img src="Iconos/send.svg">
+            </button>
+        </div>
+        <div class="chat" id="chat-area">
+           
+        </div>
+    </body>
+</html>
